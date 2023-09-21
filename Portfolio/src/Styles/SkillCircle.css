@@ -1,0 +1,51 @@
+.skill-circle{
+    position: relative;
+    top: 25vh;
+    left: 20vw;
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    /* border: .3vw dotted #c6c6c6; */
+    border: .3vw dotted var(--color-main);
+}
+
+
+.skill-circle-title{
+    position: absolute;
+    top: 50%;
+    font-family: 'Courier Prime', monospace;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    color: var(--color-text-secondary);
+    
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-color: var(--color-background);
+}
+
+.skill-circle-thumb{
+    position: absolute;
+    width: 1vw;
+    height: 1vw;
+    border: .3vw solid aqua;
+    background-color: aliceblue;
+    border-radius: 50%;
+
+
+    top: -.9vw;
+    transform-origin: 50% 18vh;
+    left: calc(50% - .5vw);
+    
+    
+
+    transform: rotate(0deg);
+}

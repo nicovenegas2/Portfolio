@@ -1,0 +1,31 @@
+.nav-container{
+    font-size: 3vh;
+    font-weight: 600;
+    font-family: 'Courier Prime', monospace;
+    
+    position: absolute;
+
+    background-color: transparent;
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2vh;
+
+    z-index: 2;
+}
+
+.nav-div{
+    position: relative;
+    margin: 1vw 2vw;
+    border:  .5vh solid transparent;
+    border-left: none;
+    border-right: none;
+    border-image: none;
+    font-stretch: semi-expanded;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    color: var(--color-text);
+}
