@@ -29,3 +29,14 @@
     text-decoration: none;
     color: var(--color-text);
 }
+
+.nav-button{
+    background-color: transparent;
+    border: none;
+    font-size: 3vh;
+    font-weight: 600;
+    font-family: 'Courier Prime', monospace;
+    color: var(--color-text);
+    cursor: pointer;
+    outline: none;
+}
