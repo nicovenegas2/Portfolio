@@ -3,17 +3,29 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Routes, Route, useLocation} from "react-router-dom";
-import SocialMedia from './Components/SocialMedia';
+import SocialMedia from './Components/Component/SocialMedia';
 import {reactLocalStorage} from 'reactjs-localstorage';
+// import all fa brands
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Agrega todas las marcas al library
+library.add(fab);
+
+
 
 import './Styles/App.css';
-import './Components/Skills';
-import './Components/Home';
-import './Components/Navbar';
-import Navbar from './Components/Navbar';
-import Home from './Components/Home';
-import Skills from './Components/Skills';
-import Projects from './Components/Projects';
+
+// import Navbar from './Components/Component/Navbar';
+// import Home from './Components/Home';
+// import Skills from './Components/Skills';
+// import Projects from './Components/Projects';
+
+import Navbar from './Components/Component/Navbar';
+import Home from './Components/Pages/Home';
+import Skills from './Components/Pages/Skills';
+import Projects from './Components/Pages/Projects';
 
 function App() {
 

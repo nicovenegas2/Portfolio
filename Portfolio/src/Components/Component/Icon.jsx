@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from 'framer-motion';
-import "../Styles/Icon.css"
+import "../../Styles/Components/Icon.css"
 
 function Icon({icon, func}){
     const timeTransitions = 0.4 ;

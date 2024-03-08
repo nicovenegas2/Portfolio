@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import '../Styles/Skills.css'
-import SocialMedia from "./SocialMedia";
-import { changeColorSocialMedia } from "../Functions/colorChange";
-import SkillCircle from "./SkillCircle";
+import '../../Styles/Pages/Skills.css'
+import SocialMedia from "../Component/SocialMedia";
+import { changeColorSocialMedia } from "../../Functions/colorChange";
+import SkillCircle from "../Component/SkillCircle";
 import {motion} from 'framer-motion';
 
 function Skills({changebg}) {

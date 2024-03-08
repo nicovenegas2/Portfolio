@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar";
-import "../Styles/Home.css";
-import avatar from "../assets/Avatar.png";
+import "../../Styles/Pages/Home.css";
+import avatar from "../../assets/Avatar.png";
 import {motion} from 'framer-motion';
 import { useEffect } from "react";
-import { changeColorSocialMedia } from "../Functions/colorChange";
+import { changeColorSocialMedia } from "../../Functions/colorChange";
 function Home({changebg}) {
 
     useEffect(() => {

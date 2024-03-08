@@ -1,7 +1,7 @@
-import Reactfrom from "react";
+import React from "react";
 import {motion} from "framer-motion";
 import { Link } from "react-router-dom";
-import "../Styles/Navbar.css";
+import "../../Styles/Components/Navbar.css";
 
 
 function LinkNav({link, text}) {

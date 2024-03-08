@@ -1,0 +1,15 @@
+[
+    {
+      "nombre": "Proyecto 1",
+      "stack": ["React", "Node.js", "MongoDB"],
+      "descripcion": "Descripción del Proyecto 1.",
+      "imagenes": ["imagen1.jpg", "imagen2.jpg", "imagen3.jpg"]
+    },
+    {
+      "nombre": "Proyecto 2",
+      "stack": ["Vue.js", "Express", "MySQL"],
+      "descripcion": "Descripción del Proyecto 2.",
+      "imagenes": ["imagen4.jpg", "imagen5.jpg", "imagen6.jpg"]
+    }
+  ]
+  

@@ -6,6 +6,7 @@
     margin: 0;
     margin: auto;
     margin-top: 4vh;
+    box-shadow: 0 0 1vh 0.5vh rgba(0, 0, 0, 0.1);
 }
 
 .socialMedia{

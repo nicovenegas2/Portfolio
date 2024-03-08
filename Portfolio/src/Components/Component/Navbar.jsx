@@ -1,9 +1,8 @@
 import React from "react";
-import "../Styles/Navbar.css";
-import {motion} from "framer-motion";
-import Contact from "./Contact";
+import "../../Styles/Components/Navbar.css";
+import {AnimatePresence, motion} from "framer-motion";
 import LinkNav from "./LinkNav";
-
+import Contact from "../Pages/Contact";
 function Navbar() {
 
     const [contact, setContact] = React.useState(false);
@@ -26,8 +25,10 @@ function Navbar() {
             whileTap={{scale: 0.9}}
             transition={{duration: 0.2}}
             onClick={toggleContact}
-            className="nav-button">// Contact;</motion.button>
-            {contact && <Contact />}
+            className="nav-button nav-link">// Contact;</motion.button>
+            <AnimatePresence>
+                {contact && <Contact closeFunction={toggleContact} />}
+            </AnimatePresence>
         </motion.div>
     );
 }

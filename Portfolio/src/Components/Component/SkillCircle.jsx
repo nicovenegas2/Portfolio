@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/SkillCircle.css";
+import "../../Styles/Components/SkillCircle.css";
 
 
 function SkillCircle({title}){
