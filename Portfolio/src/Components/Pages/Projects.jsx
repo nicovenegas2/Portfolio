@@ -3,6 +3,7 @@ import '../../Styles/Pages/Projects.css'
 import { changeColorSocialMedia } from "../../Functions/colorChange";
 import {motion} from 'framer-motion';
 import ProjectThumb from "../Component/ProjectThumb.jsx";
+import { projects } from "../../assets/Projects.Json";
 
 function Projects({changebg}) {
 
@@ -16,7 +17,11 @@ function Projects({changebg}) {
         <motion.div className = "about-div"
         > 
             <h1 className="about-title"></h1>
-                <ProjectThumb title="Venta de pizzas" img="https://via.placeholder.com/150"></ProjectThumb>
+            <div className="projects">
+                {projects.map((project, index) => {
+                    return <ProjectThumb key={index} project={project} />
+                })}
+            </div>
         </motion.div>
     );
 }

@@ -3,10 +3,10 @@ import "../../Styles/Components/ProjectThumb.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-function ProjectThumb({title, img, listIcons}) {
+function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
     return(
         <div className="project-thumb">
-            <img src={img} alt=""
+            <img src={ imgs[0]} alt=""
             className="project-thumb-img"/>
             <div className="project-thumb-overlay">
                 <p className="project-thumb-title">{title}</p>
