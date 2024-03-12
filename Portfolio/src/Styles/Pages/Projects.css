@@ -1,0 +1,24 @@
+.projects-div {
+	width: 100%;
+	height: 100%;
+	padding-top: 18vh;
+}	
+
+
+.projects-grid {
+	width: 90%;
+	height: 70vh;
+	overflow: scroll;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+	padding: 1rem;
+	top: 50%;
+}
+
+/* moddify scroolbar projects-grid */
+.projects-grid::-webkit-scrollbar {
+	width: 0;
+}

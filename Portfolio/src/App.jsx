@@ -51,9 +51,9 @@ function App() {
       <AnimatePresence>
         <Navbar></Navbar>
         <Routes location={location} key={location.pathname}>
-          <Route path='/' element={<Home changebg={changebg}/>} />
-          <Route path='/skills' element={<Skills  changebg={changebg}/>} />
-          <Route path='/projects' element={<Projects  changebg={changebg}/>} />
+          <Route path='/' element={<Home changebg={changebg}/>} key='home'/>
+          <Route path='/skills' element={<Skills  changebg={changebg}/>} key='skills'/>
+          <Route path='/projects' element={<Projects  changebg={changebg}/> } key='projects'/>
         </Routes>
         <div className='socialMedia'>
           <SocialMedia></SocialMedia>

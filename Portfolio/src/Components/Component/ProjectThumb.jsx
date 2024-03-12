@@ -1,23 +1,24 @@
+import React from "react";
 import "../../Styles/Components/ProjectThumb.css";
+import { getImage } from "../../Functions/util-images";
+import { motion } from "framer-motion";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
     return(
         <div className="project-thumb">
-            <img src={ imgs[0]} alt=""
+            <img src={getImage(imgs[0])} alt=""
             className="project-thumb-img"/>
             <div className="project-thumb-overlay">
-                <p className="project-thumb-title">{title}</p>
-
+                <motion.button 
+                className="project-thumb-title"
+                onClick={() => window.open(link, "_blank")}
+                >{title}</motion.button>
                 <div className="project-thumb-icons">
-                    <FontAwesomeIcon icon={['fab', 'github']} className="project-thumb-icon"/>
-                    <FontAwesomeIcon icon={['fab', 'react']} className="project-thumb-icon"/>
-                    <FontAwesomeIcon icon={['fab', 'node']} className="project-thumb-icon"/>
-                    <FontAwesomeIcon icon={['fab', 'js']} className="project-thumb-icon"/>
-                    <FontAwesomeIcon icon={['fab', 'css3']} className="project-thumb-icon"/>
-                    <FontAwesomeIcon icon={['fab', 'html5']} className="project-thumb-icon"/>
+                    {stack.map((icon, index) => {
+                        return <FontAwesomeIcon icon={["fab", icon]} key={index} />
+                    })}
                 </div>
             </div>
         </div>

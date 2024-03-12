@@ -1,30 +1,45 @@
+:root {
+  --time: 0.2s;
+}
+
 .project-thumb {
   position: relative;
-  width: 25rem;
-  height: 25rem;
-  transition: all 0.3s ease-in-out; /* Transición para el estado normal y hover */
+  /* width: 32rem; */
+  /* height: 18rem; */
+  height: 30vh;
+  width: 53vh;
+  transition: all var(--time) ease-in-out; /* Transición para el estado normal y hover */
 }
 
 .project-thumb-img {
   width: 100%;
   height: 100%;
-  border-radius: 1rem;
-  transition: all 0.2s ease-in-out; /* Transición para el estado normal y hover */
+  border-radius: .5rem;
+  transition: all var(--time) ease-in-out; /* Transición para el estado normal y hover */
 }
 
 .project-thumb-title {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  margin: 0;
+  border-radius: .5rem;
+  background-color: rgba(254, 254, 254, 0.7);
   
-  text-align: center;
-  font-size: 4rem;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 50%;  
+  transform: translateX(-50%);
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
   font-weight: bold;
   font-family: 'Pixelify Sans';
   text-transform: uppercase;
+  
+  border: none;
+  cursor: pointer;
 }
 
 .project-thumb-icons{
@@ -39,15 +54,15 @@
 
 .project-thumb-overlay {
   opacity: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all var(--time) ease-in-out;
 }
 
 .project-thumb:hover {
   transform: scale(1.05);
 }
 
-.project-thumb-img:hover {
-  filter: brightness(1.1);
+.project-thumb:hover .project-thumb-img {
+  filter: blur(0.07rem) drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2)); 
 }
 
 .project-thumb:hover .project-thumb-overlay {

@@ -16,6 +16,7 @@ function Home({changebg}) {
 
     return (
         <motion.div className="home-container"
+        key="home-container"
         initial={{
             y: "-100vh",
             opacity: 0,
@@ -27,8 +28,7 @@ function Home({changebg}) {
         }}
         exit={{
             opacity: 0,
-            y: "-100vh",
-            transition: { duration: transitionTime}
+            transition: { duration: 0.1}
         }}
 
 
