@@ -52,6 +52,8 @@ function Projectinfo({ project: { title, description, stack, image, github, link
           showBullets={true}
           showNavs={true}
           navStyle={2}
+          navSize={40}
+          navMargin={10}
           autoPlay={true}
           loop={true}
           images={images}

@@ -1,7 +1,7 @@
 [
     {
       "title": "Gestion de inventario y ventas de empresa",
-      "stack": ["java", "git"],
+      "stack": ["java", "square-git", "trello"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt nulla eleifend arcu auctor placerat. Curabitur turpis odio, dapibus condimentum dui in, venenatis facilisis sapien. Duis lorem lectus, mollis maximus turpis eu, malesuada euismod lectus. Sed nec suscipit lacus, ut vehicula nunc. Praesent lectus mauris, sagittis ac ante aliquet, maximus faucibus nisl. Etiam vitae commodo quam. Vivamus et tortor eu neque varius sagittis. Curabitur tincidunt magna sed suscipit placerat. Morbi at est eu justo euismod condimentum sit amet in ipsum. Maecenas dapibus est justo, et dapibus nisl sodales vehicula. Quisque facilisis velit ut hendrerit feugiat.",
       "imgs": ["DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg"],
       "link": "",
