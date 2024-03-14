@@ -15,4 +15,9 @@ export function changeColorSocialMedia(newColor = "var(--color-text)") {
         navbar[i].style.color = newColor;
     }
 
+    console.log("Color changed");
+    console.log(newColor);
+    console.log(socialMediaButton);
+
+
 }

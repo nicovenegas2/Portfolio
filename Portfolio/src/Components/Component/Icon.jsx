@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import "../../Styles/Components/Icon.css"
 
 function Icon({icon, func}){
-    const timeTransitions = 0.4 ;
+    const timeTransitions = 0.2 ;
 
     return(
         <motion.div className="icon-div"
@@ -16,11 +16,9 @@ function Icon({icon, func}){
         }}
         initial={{
             opacity:0,
-            x:-100,
         }}
         animate={{
             opacity:1,
-            x:0
         
         }}
         

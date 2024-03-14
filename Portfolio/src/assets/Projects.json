@@ -2,10 +2,82 @@
     {
       "title": "Gestion de inventario y ventas de empresa",
       "stack": ["java", "git"],
-      "description": "Descripción del Proyecto 1.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt nulla eleifend arcu auctor placerat. Curabitur turpis odio, dapibus condimentum dui in, venenatis facilisis sapien. Duis lorem lectus, mollis maximus turpis eu, malesuada euismod lectus. Sed nec suscipit lacus, ut vehicula nunc. Praesent lectus mauris, sagittis ac ante aliquet, maximus faucibus nisl. Etiam vitae commodo quam. Vivamus et tortor eu neque varius sagittis. Curabitur tincidunt magna sed suscipit placerat. Morbi at est eu justo euismod condimentum sit amet in ipsum. Maecenas dapibus est justo, et dapibus nisl sodales vehicula. Quisque facilisis velit ut hendrerit feugiat.",
+      "imgs": ["DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg"],
       "link": "",
       "github": "https://github.com/ludwig-espinosa/losjavaleros.git"
+    },
+    {
+      "title": "Proyecto 2",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 2.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 3",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 3.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 4",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 4.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 5",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 5.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 6",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 6.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 7",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 7.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 8",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 8.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 9",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 9.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
+    },
+    {
+      "title": "Proyecto 10",
+      "stack": ["java", "git"],
+      "description": "Descripción del Proyecto 10.",
+      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "link": "",
+      "github": ""
     }
 ]
   

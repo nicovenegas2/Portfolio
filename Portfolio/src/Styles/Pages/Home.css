@@ -67,10 +67,10 @@
     margin: 0;
     margin-top: 1vh;
     color: var(--color-text);
-    /* font-size: 5vh; */
+    font-size: 2.5vh;
     width: 80%;
-    padding-left: 1vw;
+    text-align: justify;
+    padding-left: 1.4vw;
     overflow: hidden;
-    text-align: left;
 
 }

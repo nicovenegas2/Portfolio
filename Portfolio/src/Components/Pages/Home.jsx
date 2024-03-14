@@ -8,7 +8,7 @@ function Home({changebg}) {
 
     useEffect(() => {
         changebg("linear-gradient(90deg, var(--color-background) 30%, var(--color-background-secondary) 30%)");
-        changeColorSocialMedia();
+        changeColorSocialMedia("var(--color-text)");
     }, [])
 
     const transitionTime = 0.5;
@@ -52,7 +52,7 @@ function Home({changebg}) {
         <div className="home-right">
             <h1 className="home-right-name">Venegas</h1>
             <p className="home-right-intro">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sapien sapien, finibus eu fermentum quis, tristique ut dui. Phasellus tempus tincidunt nibh, vitae blandit augue bibendum eget. Donec a pharetra mi. Phasellus porta consequat nibh, non pellentesque nisl tristique eget. Donec 
+            Hey! I'm a Fullstack developer, adept in both backend and frontend web development. With a passion for data analytics, I excel in cloud computing and containerization. Let's innovate together for today's tech challenges!
             </p>
         </div>
 

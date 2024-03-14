@@ -13,14 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Agrega todas las marcas al library
 library.add(fab);
 
-
-
 import './Styles/App.css';
-
-// import Navbar from './Components/Component/Navbar';
-// import Home from './Components/Home';
-// import Skills from './Components/Skills';
-// import Projects from './Components/Projects';
 
 import Navbar from './Components/Component/Navbar';
 import Home from './Components/Pages/Home';
@@ -55,9 +48,10 @@ function App() {
           <Route path='/skills' element={<Skills  changebg={changebg}/>} key='skills'/>
           <Route path='/projects' element={<Projects  changebg={changebg}/> } key='projects'/>
         </Routes>
-        <div className='socialMedia'>
+        <div id='modal-root'></div>
+        {/* <div className='socialMedia'>
           <SocialMedia></SocialMedia>
-        </div>
+        </div> */}
       </AnimatePresence>
     </ motion.div>
   )
