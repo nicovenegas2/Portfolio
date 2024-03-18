@@ -1,21 +1,23 @@
-.material-symbols-outlined{
+
+.icon-button{
+  color: var(--color-background);
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-button i{
     font-size: 9vh;
     margin: 0;
     padding: 0;
 }
 
-.icon-button{
-    color: var(--color-background);
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
-    padding: 0;
-    overflow: hidden;
-    border: none;
-    cursor: pointer;
-}
 
 .icon-div{
-    width: fit-content;
+  width: fit-content;
     height: fit-content;
 }

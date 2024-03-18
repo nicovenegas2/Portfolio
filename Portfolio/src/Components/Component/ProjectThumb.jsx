@@ -16,7 +16,17 @@ function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
 
     return(
       <>
-        <div className="project-thumb">
+        <motion.div className="project-thumb"
+        initial={{
+            opacity:0,
+            scale:0.5,
+        }}
+        animate={{
+            opacity:1,
+            scale:1,
+        }}
+        transition={{duration:0.3}}
+        >
             <img src={getImage(imgs[0])} alt=""
             className="project-thumb-img"/>
             <div className="project-thumb-overlay">
@@ -30,7 +40,7 @@ function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
                     })}
                 </div>
             </div>
-        </div>
+        </motion.div>
             <AnimatePresence>
                 {info && <Modal onClose={toggleInfo} children={<Projectinfo project={{title, description, stack, image: imgs, github, link}}/>} />}
 

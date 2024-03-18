@@ -16,7 +16,7 @@ function Skills({changebg}) {
     return(
         <motion.div className = "about-div"
         > 
-            <SkillCircle title="Front-end" />
+            {/* <SkillCircle title="Front-end" /> */}
         </motion.div>
     );
 }

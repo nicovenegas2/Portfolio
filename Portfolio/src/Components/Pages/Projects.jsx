@@ -10,6 +10,9 @@ function Projects({changebg}) {
     useEffect(() => {
         changebg("linear-gradient(180deg, var(--color-background) 100%, var(--color-background-secondary) 0%)");
         changeColorSocialMedia("var(--color-text-secondary)");
+        // changebg("linear-gradient(0deg, var(--color-background) 0%, var(--color-background-secondary) 0%)");
+        // changeColorSocialMedia();
+
     }, [])
     
     const transitionTime = 0.5;
@@ -17,15 +20,15 @@ function Projects({changebg}) {
     return(
         <motion.div className = "projects-div"
         key="projects-div"
-        initial={{
-            y: "100vh",
-            opacity: 0,
-        }}
-        animate={{
-            y: 0,
-            transition: { duration: transitionTime},
-            opacity: 1,
-        }}
+        // initial={{
+        //     y: "100vh",
+        //     opacity: 0,
+        // }}
+        // animate={{
+        //     y: 0,
+        //     transition: { duration: transitionTime},
+        //     opacity: 1,
+        // }}
         > 
             <div className="projects-grid">
                 {projects.map((project, index) => {

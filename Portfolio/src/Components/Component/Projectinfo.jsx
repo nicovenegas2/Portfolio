@@ -7,7 +7,7 @@ function Projectinfo({ project: { title, description, stack, image, github, link
 
   // get images from imgs except the first one
   // cut the first image
-  const images = getImages(image.slice(1));
+  const images = getImages(image);
   console.log(images);
 
   return (
@@ -55,12 +55,13 @@ function Projectinfo({ project: { title, description, stack, image, github, link
           navSize={40}
           navMargin={10}
           autoPlay={true}
+          autoPlayDelay={5}
           loop={true}
           images={images}
         />
         <div className="projectinfo-buttons">
-          <button className="projectinfo-button">Github</button>
           <button className="projectinfo-button">Demo</button>
+          <a href={github} target="_blank" className="projectinfo-button">Github</a>
         </div>
       </div>
 

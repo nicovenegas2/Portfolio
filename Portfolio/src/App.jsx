@@ -47,6 +47,7 @@ function App() {
           <Route path='/' element={<Home changebg={changebg}/>} key='home'/>
           <Route path='/skills' element={<Skills  changebg={changebg}/>} key='skills'/>
           <Route path='/projects' element={<Projects  changebg={changebg}/> } key='projects'/>
+          <Route path='*' element={<Home changebg={changebg}/>} key='home'/>
         </Routes>
         <div id='modal-root'></div>
         {/* <div className='socialMedia'>

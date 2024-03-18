@@ -1,6 +1,6 @@
 [
     {
-      "title": "Gestion de inventario y ventas de empresa",
+      "title": "Inventory management and company sales",
       "stack": ["java", "square-git", "trello"],
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt nulla eleifend arcu auctor placerat. Curabitur turpis odio, dapibus condimentum dui in, venenatis facilisis sapien. Duis lorem lectus, mollis maximus turpis eu, malesuada euismod lectus. Sed nec suscipit lacus, ut vehicula nunc. Praesent lectus mauris, sagittis ac ante aliquet, maximus faucibus nisl. Etiam vitae commodo quam. Vivamus et tortor eu neque varius sagittis. Curabitur tincidunt magna sed suscipit placerat. Morbi at est eu justo euismod condimentum sit amet in ipsum. Maecenas dapibus est justo, et dapibus nisl sodales vehicula. Quisque facilisis velit ut hendrerit feugiat.",
       "imgs": ["DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg"],
@@ -8,34 +8,34 @@
       "github": "https://github.com/ludwig-espinosa/losjavaleros.git"
     },
     {
-      "title": "Proyecto 2",
-      "stack": ["java", "git"],
+      "title": "Midi Piano App",
+      "stack": ["react", "html5", "css3-alt", "js", "git"],
       "description": "Descripción del Proyecto 2.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "imgs": ["MidiPiano/piano.gif","MidiPiano/Thumb.jpeg"],
       "link": "",
-      "github": ""
+      "github": "https://github.com/nicovenegas2/MidiPianoApp.git"
     },
     {
-      "title": "Proyecto 3",
-      "stack": ["java", "git"],
+      "title": "Graph algorithms Visualizer",
+      "stack": ["python", "square-github"],
       "description": "Descripción del Proyecto 3.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "imgs": ["Graph/grafo2.gif", "Graph/Thumb.gif"],
       "link": "",
-      "github": ""
+      "github": "https://github.com/nicovenegas2/Grafy-Visualization.git"
     },
     {
-      "title": "Proyecto 4",
-      "stack": ["java", "git"],
+      "title": "Pizza Delivery Web",
+      "stack": ["react", "html5", "css3-alt", "js", "git"],
       "description": "Descripción del Proyecto 4.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "imgs": ["PizzaShop/Menu.jpeg","PizzaShop/Thumb.jpeg", "PizzaShop/Pay.jpeg", "PizzaShop/MenuOverview.gif"],
       "link": "",
-      "github": ""
+      "github": "https://github.com/nicovenegas2/pizza-shop.git"
     },
     {
-      "title": "Proyecto 5",
-      "stack": ["java", "git"],
+      "title": "employee management and overtime",
+      "stack": ["docker", "jenkins", "node", "git", "html5","css3-alt"],
       "description": "Descripción del Proyecto 5.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "imgs": ["Empleados/pagos.jpeg", "Empleados/empleados.jpeg", "Empleados/Thumb.jpeg", "Empleados/justificativos.jpeg"],
       "link": "",
       "github": ""
     },

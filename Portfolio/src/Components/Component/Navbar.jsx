@@ -2,6 +2,8 @@ import React from "react";
 import "../../Styles/Components/Navbar.css";
 import {AnimatePresence, motion} from "framer-motion";
 import LinkNav from "./LinkNav";
+import {Link} from "react-router-dom";
+import Modal from "./Modal";
 import Contact from "../Pages/Contact";
 function Navbar() {
 
@@ -27,7 +29,8 @@ function Navbar() {
             onClick={toggleContact}
             className="nav-button nav-link">// Contact;</motion.button>
             <AnimatePresence>
-                {contact && <Contact closeFunction={toggleContact} />}
+                {/* {contact && <Contact closeFunction={toggleContact} />} */}
+                {contact && <Modal onClose={toggleContact} children={<Contact/>} />}
             </AnimatePresence>
         </motion.div>
     );

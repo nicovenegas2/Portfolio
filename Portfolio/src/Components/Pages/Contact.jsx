@@ -19,10 +19,10 @@ function Contact( {closeFunction}) {
         exit={{
             opacity: 0,
             scale: 0.5,
-        }}
+            transition: { duration: 0.15 }
+      }}
         transition={{ duration: 1,type: "spring", stiffness: 300, damping: 17}}
         >
-        <div className="close-outside" onClick={closeFunction}></div>
         <h1>Lets Work together</h1>
 
         <form className="contact-form">

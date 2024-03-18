@@ -2,8 +2,11 @@ import React from "react";
 import {motion} from 'framer-motion';
 import "../../Styles/Components/Icon.css"
 
-function Icon({icon, func}){
+function Icon({icon, link}){
     const timeTransitions = 0.2 ;
+    function openLink(){
+      window.open(link, "_blank");
+    }
 
     return(
         <motion.div className="icon-div"
@@ -27,10 +30,10 @@ function Icon({icon, func}){
             <motion.button className="icon-button"
             // whileHover={{color:"var(--color-main)"}}
             transition={{duration:timeTransitions}}
-            onClick={func}
+            onClick={() => openLink(link)}
             
             >
-                <i className="material-symbols-outlined">{icon}</i>
+                <i className={`${icon}`}></i>
             </motion.button>
         </motion.div>
     );
