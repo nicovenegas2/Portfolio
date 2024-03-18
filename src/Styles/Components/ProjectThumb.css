@@ -7,7 +7,7 @@
   /* width: 32rem; */
   /* height: 18rem; */
   height: 30vh;
-  width: 53vh;
+  width: 27vw;
   transition: all var(--time) ease-in-out; /* Transición para el estado normal y hover */
 }
 

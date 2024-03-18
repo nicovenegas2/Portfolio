@@ -33,6 +33,15 @@ body{
   'opsz' 24
 }
 
+
+/* detect orientation  and make landscape*/
+@media (orientation: landscape) {
+  :root {
+    --background-color: red;
+  }
+}
+
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
