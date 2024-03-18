@@ -30,7 +30,7 @@ function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
             <img src={getImage(imgs[0])} alt=""
             className="project-thumb-img"/>
             <div className="project-thumb-overlay">
-                <motion.button 
+                <motion.button  
                 className="project-thumb-title"
                 onClick={() => toggleInfo()}
                 >{title}</motion.button>
