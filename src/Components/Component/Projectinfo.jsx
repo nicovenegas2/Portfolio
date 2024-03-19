@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../Styles/Components/ProjectInfo.css";
 import { motion } from "framer-motion";
 import { getImages } from "../../Functions/util-images";
 import SimpleImageSlider from "react-simple-image-slider";
-function Projectinfo({ project: { title, description, stack, image, github, link } }) {
+function Projectinfo({ project: { title, description, stack, folder, image, github, link } }) {
 
   // get images from imgs except the first one
-  // cut the first image
-  const images = getImages(image);
-  console.log(images);
+  const images = getImages(folder, image);
+  const [imgWidth, setImgWidth] = React.useState(0);
+
+  function getWidthImage() {
+    // search object with class projectinfo-buttons
+    const buttons = document.querySelector(".projectinfo-buttons");
+    // get width of the buttons in px
+    const width = buttons.clientWidth;
+    return width;
+  }
+
+  useEffect(() => {
+    setImgWidth(getWidthImage());  
+    console.log(images);
+
+  }, [])
+
 
   return (
     <motion.div className="projectinfo-container"
@@ -47,8 +61,8 @@ function Projectinfo({ project: { title, description, stack, image, github, link
       </div>
       <div className="projectinfo-test">
         <SimpleImageSlider className="projectinfo-imgs"
-          width={650}
-          height={380}
+          width={imgWidth}
+          height={imgWidth*0.6}
           showBullets={true}
           showNavs={true}
           navStyle={2}

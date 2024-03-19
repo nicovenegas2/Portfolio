@@ -1,4 +1,4 @@
-:root {
+html {
   --color-main: #C2F8CB;
   --color-background-secondary: #5603AD;
   --color-text-secondary: #8367C7;
@@ -10,6 +10,7 @@
   width: 100vw;
   overflow: hidden;
   font-family: var(--font-family);
+  font-size: 16px;
 
   /* display: flex;
   align-items: center;
@@ -41,7 +42,13 @@ body{
   }
 }
 
+/* detect screen zize < 1300px */
 
+@media (max-width: 1300px) {
+  html {
+    font-size: 10px;
+  }
+}
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

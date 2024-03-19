@@ -2,40 +2,45 @@
     {
       "title": "Inventory management and company sales",
       "stack": ["java", "square-git", "trello"],
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt nulla eleifend arcu auctor placerat. Curabitur turpis odio, dapibus condimentum dui in, venenatis facilisis sapien. Duis lorem lectus, mollis maximus turpis eu, malesuada euismod lectus. Sed nec suscipit lacus, ut vehicula nunc. Praesent lectus mauris, sagittis ac ante aliquet, maximus faucibus nisl. Etiam vitae commodo quam. Vivamus et tortor eu neque varius sagittis. Curabitur tincidunt magna sed suscipit placerat. Morbi at est eu justo euismod condimentum sit amet in ipsum. Maecenas dapibus est justo, et dapibus nisl sodales vehicula. Quisque facilisis velit ut hendrerit feugiat.",
-      "imgs": ["DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg", "DreamGifts/Thumb.jpeg"],
+      "description": "The Pack Sales Management System, developed in Java, offers a complete solution for start-up companies dedicated to the sale of product packs. It allows detailed sales management, invoicing and customer tracking, as well as customized product pack creation. It also provides advanced inventory control with low stock alerts, supplier and bank management, and detailed reporting for strategic analysis. With an intuitive interface, this system simplifies business operations and improves efficiency in the management of product pack sales.",
+      "folder": "DreamGifts",
+      "imgs": ["Thumb.jpeg"],
       "link": "",
       "github": "https://github.com/ludwig-espinosa/losjavaleros.git"
     },
     {
       "title": "Midi Piano App",
       "stack": ["react", "html5", "css3-alt", "js", "git"],
-      "description": "Descripción del Proyecto 2.",
-      "imgs": ["MidiPiano/piano.gif","MidiPiano/Thumb.jpeg"],
+      "description": "Application for those who want to see what they play on the piano,it allows you to easily connect a keyboard via midi and see the notes played in real time.you only need to connect the piano/instrument and open the application,",
+      "folder": "MidiPiano",
+      "imgs": ["piano.gif","Thumb.jpeg"],
       "link": "",
       "github": "https://github.com/nicovenegas2/MidiPianoApp.git"
     },
     {
       "title": "Graph algorithms Visualizer",
       "stack": ["python", "square-github"],
-      "description": "Descripción del Proyecto 3.",
-      "imgs": ["Graph/grafo2.gif", "Graph/Thumb.gif"],
+      "description": "This interactive simulation developed in Python allows users to create nodes and connect them together to visualize graph search algorithms. With dynamic animations, it shows how these algorithms find solutions by exploring the graph. This tool not only facilitates the understanding of search algorithms, but also allows users to experiment and explore different scenarios.",
+      "folder": "Graph",
+      "imgs": ["grafo2.gif", "Thumb.gif"],
       "link": "",
       "github": "https://github.com/nicovenegas2/Grafy-Visualization.git"
     },
     {
       "title": "Pizza Delivery Web",
       "stack": ["react", "html5", "css3-alt", "js", "git"],
-      "description": "Descripción del Proyecto 4.",
-      "imgs": ["PizzaShop/Menu.jpeg","PizzaShop/Thumb.jpeg", "PizzaShop/Pay.jpeg", "PizzaShop/MenuOverview.gif"],
+      "description": "The website developed in React allows the purchase of pizzas with an integrated shopping cart and a contact form. It is intuitive and user-friendly, allowing users to browse pizza options, add items to the cart and complete the purchase easily. In addition, the contact form facilitates communication with the customer service team for additional questions or comments.",
+      "folder": "PizzaShop",
+      "imgs": ["Menu.jpeg","Thumb.jpeg", "Pay.jpeg", "MenuOverview.gif"],
       "link": "",
       "github": "https://github.com/nicovenegas2/pizza-shop.git"
     },
     {
       "title": "employee management and overtime",
       "stack": ["docker", "jenkins", "node", "git", "html5","css3-alt"],
-      "description": "Descripción del Proyecto 5.",
-      "imgs": ["Empleados/pagos.jpeg", "Empleados/empleados.jpeg", "Empleados/Thumb.jpeg", "Empleados/justificativos.jpeg"],
+      "description": "Employee management system based on microservices that allows you to record the hours of entry and exit of employees, in addition to calculating the salary of employees taking into account, the employee's position, days worked, overtime and absences, this reading a file given by the administrative.",
+      "folder": "Empleados",
+      "imgs": ["pagos.jpeg", "empleados.jpeg", "Thumb.jpeg", "justificativos.jpeg"],
       "link": "",
       "github": ""
     },
@@ -43,39 +48,8 @@
       "title": "Proyecto 6",
       "stack": ["java", "git"],
       "description": "Descripción del Proyecto 6.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
-      "link": "",
-      "github": ""
-    },
-    {
-      "title": "Proyecto 7",
-      "stack": ["java", "git"],
-      "description": "Descripción del Proyecto 7.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
-      "link": "",
-      "github": ""
-    },
-    {
-      "title": "Proyecto 8",
-      "stack": ["java", "git"],
-      "description": "Descripción del Proyecto 8.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
-      "link": "",
-      "github": ""
-    },
-    {
-      "title": "Proyecto 9",
-      "stack": ["java", "git"],
-      "description": "Descripción del Proyecto 9.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
-      "link": "",
-      "github": ""
-    },
-    {
-      "title": "Proyecto 10",
-      "stack": ["java", "git"],
-      "description": "Descripción del Proyecto 10.",
-      "imgs": ["DreamGifts/Thumb.jpeg"],
+      "folder": "DreamGifts",
+      "imgs": ["Thumb.jpeg"],
       "link": "",
       "github": ""
     }

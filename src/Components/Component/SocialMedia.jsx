@@ -1,12 +1,13 @@
 import React from "react";
 import "../../Styles/Components/SocialMedia.css"
 import Icon from './Icon'
-
+import resume from "../../assets/Resume-Nicolas-Venegas.pdf"
 
 function SocialMedia() {
+
     return(
         <div className="social-media-div">
-            <Icon icon={"fas fa-file-pdf"} link="assets/Resume-Nicolas-Venegas.pdf"></Icon>
+            <Icon icon={"fas fa-file-pdf"} link={resume}></Icon>
             <Icon icon={"fab fa-linkedin"}link="https://www.linkedin.com/in/covedev"></Icon>
             <Icon icon={"fab fa-spotify"}link= "https://github.com/nicovenegas2"></Icon>
             <Icon icon={"fab fa-square-github"}link="https://github.com/nicovenegas2"></Icon>

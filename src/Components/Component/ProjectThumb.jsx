@@ -7,7 +7,7 @@ import Modal from "./Modal";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
+function ProjectThumb({project: {title,stack,description,folder,imgs,github,link}}) {
 
   const [info, setInfo] = React.useState(false);
   function toggleInfo(){
@@ -27,7 +27,7 @@ function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
         }}
         transition={{duration:0.3}}
         >
-            <img src={getImage(imgs[0])} alt=""
+            <img src={getImage(folder,imgs[0])} alt=""
             className="project-thumb-img"/>
             <div className="project-thumb-overlay">
                 <motion.button  
@@ -42,7 +42,7 @@ function ProjectThumb({project: {title,stack,description,imgs,github,link}}) {
             </div>
         </motion.div>
             <AnimatePresence>
-                {info && <Modal onClose={toggleInfo} children={<Projectinfo project={{title, description, stack, image: imgs, github, link}}/>} />}
+                {info && <Modal onClose={toggleInfo} children={<Projectinfo project={{title, description, stack, folder, image: imgs, github, link}}/>} />}
 
             </AnimatePresence>
       </>

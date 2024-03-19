@@ -1,14 +1,16 @@
 
-export function getImage(imgName) {
-  return new URL(`../assets/${imgName}`, import.meta.url).href;
+export function getImage(folder, imgName) {
+  return new URL(`../assets/${folder}/${imgName}`, import.meta.url).href;
 }
 
 
-export function getImages(imgs) {
+export function getImages(folder, imgs) {
   // return array of objects with src and alt
   return imgs.map(img => {
+    console.log(folder, img)
+    console.log(getImage(folder, img));
     return {
-      url: getImage(img)
+      url: getImage(folder, img)
     }
   });
 }

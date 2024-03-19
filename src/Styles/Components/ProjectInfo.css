@@ -1,17 +1,20 @@
 .projectinfo-container {
   position: absolute;
   
-  width: 55vw;
-  height: 90vh;
+  /* width: 55vw; */
+  /* height: 90vh; */
+  width: 67rem;
+  height: 54rem;
   padding: 2rem;
   border-radius: 1rem;
+  overflow: hidden;
   
   top: 2vh;
   left: 20vw;
   background-color: white;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr 5fr;
   row-gap: 2rem;
   column-gap: 1rem;
@@ -78,6 +81,7 @@
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   width: 100%;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
