@@ -4,7 +4,7 @@
       "stack": ["java", "square-git", "trello"],
       "description": "The Pack Sales Management System, developed in Java, offers a complete solution for start-up companies dedicated to the sale of product packs. It allows detailed sales management, invoicing and customer tracking, as well as customized product pack creation. It also provides advanced inventory control with low stock alerts, supplier and bank management, and detailed reporting for strategic analysis. With an intuitive interface, this system simplifies business operations and improves efficiency in the management of product pack sales.",
       "folder": "DreamGifts",
-      "imgs": ["Thumb.jpeg"],
+      "imgs": ["Thumb.jpeg", "administracion.gif", "ventas.gif", "inventario.gif", "compras.gif"],
       "link": "",
       "github": "https://github.com/ludwig-espinosa/losjavaleros.git"
     },

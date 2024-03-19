@@ -1,11 +1,34 @@
-import React from "react";
+import React,{useRef} from "react";
 import "../../Styles/Pages/Contact.css";
+import emailjs from '@emailjs/browser';
 
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
+
 
 function Contact( {closeFunction}) {
-    return(
-        <motion.div className="contact-container"
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(import.meta.env.VITE_PUBLIC_KEY_JS)
+    emailjs
+      .sendForm(import.meta.env.VITE_SERVICE_ID_JS, import.meta.env.VITE_TEMPLATE_ID_JS, form.current, {
+        publicKey: import.meta.env.VITE_PUBLIC_KEY_JS,
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
+  return(
+      <motion.div className="contact-container"
         initial={{
             scale: 0.5,
             opacity: 0,
@@ -25,10 +48,12 @@ function Contact( {closeFunction}) {
         >
         <h1>Lets Work together</h1>
 
-        <form className="contact-form">
+        <form className="contact-form" ref={form} onSubmit={sendEmail}>
             <div className="contact-section">
+                <label htmlFor="name">Name:</label>
+                <input type="text" id="name" name="name" required></input>
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="email" required></input>
+                <input type="email" id="email" name="from_email" required></input>
             </div>
             <div className="contact-section message" >
                 <label htmlFor="message">Message:</label>

@@ -1,4 +1,5 @@
-
+node/modules
+dist
 node_modules/yocto-queue/readme.md
 node_modules/yocto-queue/package.json
 node_modules/yocto-queue/license
@@ -8097,3 +8098,4 @@ node_modules/.bin/eslint
 node_modules/.bin/esbuild
 node_modules/.bin/env-cmd
 node_modules/.bin/acorn
+*.local
