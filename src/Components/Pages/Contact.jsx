@@ -46,23 +46,29 @@ function Contact( {closeFunction}) {
       }}
         transition={{ duration: 1,type: "spring", stiffness: 300, damping: 17}}
         >
-        <h1>Lets Work together</h1>
+        <section className="card-form">
+          <div className="section-1">
 
-        <form className="contact-form" ref={form} onSubmit={sendEmail}>
-            <div className="contact-section">
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" required></input>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="from_email" required></input>
-            </div>
-            <div className="contact-section message" >
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
+            <h1>Lets Talk!</h1>
+            <form className="contact-form" ref={form} onSubmit={sendEmail}>
+                <div className="contact-section">
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" name="name" required></input>
+                    <label htmlFor="email">Email:</label>
+                    <input type="email" id="email" name="from_email" required></input>
+                </div>
+                <div className="contact-section message" >
+                    <label htmlFor="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
 
-            <button type="submit" className="contact-button">Send</button>
-        </form>
+                <button type="submit" className="contact-button">Send</button>
+            </form>
+          </div>
+          <div className="section-2"></div>
 
+
+        </section>
         </motion.div>
     )
 }

@@ -35,19 +35,12 @@ body{
 }
 
 
-/* detect orientation  and make landscape*/
-@media (orientation: landscape) {
-  :root {
-    --background-color: red;
-  }
-}
 
-/* detect screen zize < 1300px */
-
-@media (max-width: 1300px) {
+@media  (max-width: 1750px){
   html {
     font-size: 10px;
   }
+  
 }
 /* @media (prefers-color-scheme: light) {
   :root {
