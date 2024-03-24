@@ -11,7 +11,7 @@ function Home({changebg}) {
         changeColorSocialMedia("var(--color-text)");
     }, [])
 
-    const transitionTime = 0.5;
+    const transitionTime = 0.4;
 
 
     return (
@@ -37,7 +37,6 @@ function Home({changebg}) {
             <h1 className="home-left-name">Nicolas</h1>
         </div>
         <div className="home-right">
-          <div></div>
             <h1 className="home-right-name">Venegas</h1>
             <p className="home-right-intro">
             Hey! I'm a Fullstack developer, adept in both backend and frontend web development. With a passion for data analytics, I excel in cloud computing and containerization. Let's innovate together for today's tech challenges!

@@ -19,7 +19,7 @@ function Navbar() {
         animate={{ opacity: 1}}
         transition={{ duration: 0.4}}
         > 
-            <LinkNav link="/" text="About Me"></LinkNav>
+            <LinkNav link="/Portfolio" text="About Me"></LinkNav>
             <LinkNav link="/projects" text="Projects"></LinkNav>
             <LinkNav link="/skills" text="Skills"></LinkNav>
             <motion.button

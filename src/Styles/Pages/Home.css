@@ -11,18 +11,22 @@
 }
 
 .home-left{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+    display:grid;
+    grid-template-rows: 54% 8% 10%;
 }
 
 .home-avatar{
-    height: 23rem;
-    width: 13vw;
-    width: 16rem;
+    /* height: 23rem; */
+    /* width: 16rem; */
+    width: 50%;
+    height: 80%;
     object-fit: fill;
     mix-blend-mode: multiply;
-    margin-top: 6rem;
+    margin-left: 25%;
+    margin-top: 20%;
 }
 
 .home-left-intro{
@@ -31,7 +35,7 @@
     margin-top: .6rem;
     color: var(--color-text-secondary);
     font-size: 3.5rem;
-    width: 90%;
+    width: 97%;
     text-align: right;
 
 }
@@ -42,7 +46,7 @@
     font-family: 'Rubik Mono One', sans-serif;
     margin: 0;
     font-size: var(--text--name);
-    width: 90%;
+    width: 97%;
     text-align: right;
     
     /* margin-left: 7vw; */
@@ -56,33 +60,30 @@
     padding-top: 20rem; */
 
     display:grid;
-    grid-template-rows: 55% 17% 32%;
+    grid-template-rows: 62% 11% 10%;
 
+    padding: 0 1.5rem;
     width: 50%;
 }
 
 .home-right-name{
-  grid: column 2 / 3;
+    grid-row: 2/3;
     color: var(--color-main);
     text-transform: uppercase;
     font-family: 'Rubik Mono One', sans-serif;
     font-size: var(--text--name);
-    margin-bottom: 0;
-    margin-left: 1vw;
+    margin: 0;
 }
 
 .home-right-intro{
-    grid: column 3 / 4;
+  grid-row: 3/4;
     font-family: 'Courier Prime', monospace;
     height: 27vh;
     margin: 0;
-    /* margin-top: 1vh; */
     color: var(--color-text);
-    font-size: 2.5vh;
     font-size: 1.5rem;
-    width: 80%;
+    width: 90%;
     text-align: justify;
-    padding-left: 1.4vw;
     overflow: hidden;
 
 }

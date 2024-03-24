@@ -1,16 +1,21 @@
 .container-app{
-    width: 96vw;
-    height: 90vh;
-    width: 96%;
-    height: 55rem;
+    /* height: 90vh; */
+    /* height: 57rem; */
+    width: 100%;
+    height: 100%;
 
 
     font-size: 2.5vh;
-    border-radius: 1%;
+    /* border-radius: 1%; */
     margin: 0;
     margin: auto;
-    margin-top: 4vh;
+    /* margin-top: 4vh; */
     box-shadow: inset 0 0 1vh 0.5vh rgba(0, 0, 0, 0.14);
+}
+
+#root{
+    height: 100%;
+    width: 100%;
 }
 
 .socialMedia{
