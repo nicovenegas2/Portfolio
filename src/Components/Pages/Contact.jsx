@@ -24,6 +24,9 @@ function Contact( {closeFunction}) {
           console.log('FAILED...', error.text);
         },
       );
+
+    closeFunction();
+
   };
 
 

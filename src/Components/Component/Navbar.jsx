@@ -30,7 +30,7 @@ function Navbar() {
             className="nav-button nav-link">// Contact;</motion.button>
             <AnimatePresence>
                 {/* {contact && <Contact closeFunction={toggleContact} />} */}
-                {contact && <Modal onClose={toggleContact} children={<Contact/>} />}
+                {contact && <Modal onClose={toggleContact} children={<Contact closeFunction={toggleContact}/>} />}
             </AnimatePresence>
         </motion.div>
     );
