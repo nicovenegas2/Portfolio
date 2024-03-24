@@ -1,7 +1,11 @@
 .container-app{
     width: 96vw;
-    font-size: 2.5vh;
     height: 90vh;
+    width: 96%;
+    height: 55rem;
+
+
+    font-size: 2.5vh;
     border-radius: 1%;
     margin: 0;
     margin: auto;
@@ -11,7 +15,7 @@
 
 .socialMedia{
     position: absolute;
-    bottom: 25vh;
     height: 45vh;
     right: 5vw;
+    top: 18rem;
 }
