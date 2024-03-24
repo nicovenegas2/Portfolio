@@ -6,8 +6,8 @@
 
 
 .projects-grid {
-	width: 90%;
-	height: 70vh;
+	width: 85%;
+	height: 80%;
 	overflow: scroll;
 
   display: grid;
@@ -21,5 +21,5 @@
 
 /* moddify scroolbar projects-grid */
 .projects-grid::-webkit-scrollbar {
-	width: 0;
+	width: 1rem;
 }

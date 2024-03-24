@@ -50,9 +50,6 @@ function App() {
           <Route path='*' element={<Home changebg={changebg}/>} key='home'/>
         </Routes>
         <div id='modal-root'></div>
-        {/* <div className='socialMedia'>
-          <SocialMedia></SocialMedia>
-        </div> */}
       </AnimatePresence>
     </ motion.div>
   )
