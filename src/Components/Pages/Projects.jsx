@@ -1,42 +1,56 @@
-import React, { useEffect } from "react";
-import '../../Styles/Pages/Projects.css'
-import { changeColorSocialMedia } from "../../Functions/colorChange";
-import {motion} from 'framer-motion';
-import ProjectThumb from "../Component/ProjectThumb.jsx";
-import projects from "../../assets/Projects.json";
+import { useState } from 'react';
+import Modal from '../Component/Modal';
+import Projectinfo from '../Component/Projectinfo';
+import ProjectThumb from '../Component/ProjectThumb';
+import {
+  PORTFOLIO_PROJECTS,
+  PROJECT_TITLES,
+} from '../../Functions/portfolio-data';
 
-function Projects({changebg}) {
-
-    useEffect(() => {
-        changebg("linear-gradient(180deg, var(--color-background) 100%, var(--color-background-secondary) 0%)");
-        changeColorSocialMedia("var(--color-text-secondary)");
-        // changebg("linear-gradient(0deg, var(--color-background) 0%, var(--color-background-secondary) 0%)");
-        // changeColorSocialMedia();
-
-    }, [])
-    
-    const transitionTime = 0.5;
-    
-    return(
-        <motion.div className = "projects-div"
-        key="projects-div"
-        // initial={{
-        //     y: "100vh",
-        //     opacity: 0,
-        // }}
-        // animate={{
-        //     y: 0,
-        //     transition: { duration: transitionTime},
-        //     opacity: 1,
-        // }}
-        > 
-            <div className="projects-grid">
-                {projects.map((project, index) => {
-                    return <ProjectThumb key={index} project={project} />
-                })}
-            </div>
-        </motion.div>
-    );
+export default function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [filter, setFilter] = useState('All work');
+  const filteredProjects = PORTFOLIO_PROJECTS.filter((project) => {
+    if (filter === 'All work') return true;
+    const isWebProject = project.stack.includes('react');
+    return filter === 'Web' ? isWebProject : !isWebProject;
+  });
+  return (
+    <section className="page projects-page">
+      <div className="page-heading">
+        <div>
+          <h1>Ideas, made real.</h1>
+          <p>A few things I’ve built, explored and learned from.</p>
+        </div>
+        <div className="filters" aria-label="Filter projects">
+          {['All work', 'Web', 'Applications'].map((option) => (
+            <button
+              key={option}
+              aria-pressed={filter === option}
+              onClick={() => setFilter(option)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="project-grid">
+        {filteredProjects.map((project) => (
+          <ProjectThumb
+            key={project.folder}
+            project={project}
+            onSelect={() => setSelectedProject(project)}
+          />
+        ))}
+      </div>
+      {selectedProject && (
+        <Modal
+          title={PROJECT_TITLES[selectedProject.folder]}
+          onClose={() => setSelectedProject(null)}
+        >
+          <Projectinfo project={selectedProject} />
+        </Modal>
+      )}
+    </section>
+  );
 }
-
-export default Projects;

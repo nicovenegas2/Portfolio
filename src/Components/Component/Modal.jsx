@@ -1,20 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {motion} from 'framer-motion';
-import '../../Styles/Components/Modal.css';
+import { useEffect, useRef } from 'react';
 
-
-function Modal({onClose, children}) {
-    return ReactDOM.createPortal(
-        <div className="modal">
-            <div className="modal-content">
-                {children}
-            </div>
-            <motion.div className="modal-background" onClick={onClose}></motion.div>
-        </div>,
-        document.getElementById('modal-root')
-    )
-
+export default function Modal({ children, onClose, title }) {
+  const dialogRef = useRef(null);
+  useEffect(() => {
+    const previousFocus = document.activeElement;
+    dialogRef.current.showModal();
+    document.body.style.overflow = 'hidden';
+    return () => {
+      dialogRef.current?.close();
+      document.body.style.overflow = '';
+      previousFocus?.focus();
+    };
+  }, []);
+  return (
+    <dialog
+      ref={dialogRef}
+      className="dialog"
+      aria-label={title}
+      onCancel={onClose}
+      onClick={(event) => {
+        if (event.target === event.currentTarget) onClose();
+      }}
+    >
+      <button
+        className="close-button"
+        onClick={onClose}
+        aria-label="Close dialog"
+      >
+        ×
+      </button>
+      {children}
+    </dialog>
+  );
 }
-
-export default Modal;

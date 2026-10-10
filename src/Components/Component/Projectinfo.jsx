@@ -1,86 +1,76 @@
-import React, { useEffect } from "react";
-import "../../Styles/Components/ProjectInfo.css";
-import { motion } from "framer-motion";
-import { getImages } from "../../Functions/util-images";
-import SimpleImageSlider from "react-simple-image-slider";
-function Projectinfo({ project: { title, description, stack, folder, image, github, link } }) {
+import { useState } from 'react';
+import Icon from './Icon';
+import { getImage } from '../../Functions/util-images';
+import {
+  PROJECT_TITLES,
+  PROJECT_SUMMARIES,
+  TECHNOLOGY_NAMES,
+} from '../../Functions/portfolio-data';
 
-  // get images from imgs except the first one
-  const images = getImages(folder, image);
-  const [imgWidth, setImgWidth] = React.useState(0);
+export default function Projectinfo({ project }) {
+  const [imageIndex, setImageIndex] = useState(0);
 
-  function getWidthImage() {
-    // search object with class projectinfo-buttons
-    const buttons = document.querySelector(".projectinfo-buttons");
-    // get width of the buttons in px
-    const width = buttons.clientWidth;
-    return width;
+  function showPreviousImage() {
+    setImageIndex((imageIndex - 1 + project.imgs.length) % project.imgs.length);
   }
 
-  useEffect(() => {
-    setImgWidth(getWidthImage());  
-    console.log(images);
-
-  }, [])
-
+  function showNextImage() {
+    setImageIndex((imageIndex + 1) % project.imgs.length);
+  }
 
   return (
-    <motion.div className="projectinfo-container"
-      initial={{
-        scale: 0.5,
-        opacity: 0,
-        y: 200,
-      }}
-      animate={{
-        scale: 1,
-        opacity: 1,
-        y: 0,
-      }}
-      exit={{
-        opacity: 0,
-        scale: 0.5,
-        transition: { duration: 0.15 }
-      }}
-      transition={{ type: "spring", stiffness: 440, damping: 22 }}
-    >
-
-      <div className="projectinfo-title">
-        <h1>{title}</h1>
+    <article className="project-detail">
+      <div className="detail-heading">
+        <h2>{PROJECT_TITLES[project.folder]}</h2>
+        <p>{PROJECT_SUMMARIES[project.folder]}</p>
       </div>
-      <div className="projectinfo-data">
-        <div className="projectinfo-desc">
-          <p>{description}</p>
-        </div>
-        <div className="projectinfo-stack">
-          {/* <p>Stack: </p> */}
-          <div className="projectinfo-stack-icons">
-            {stack.map((icon, index) => {
-              return <i className={`fab fa-${icon}`} key={index}></i>})}
-          </div>
-        </div>
-      </div>
-      <div className="projectinfo-test">
-        <SimpleImageSlider className="projectinfo-imgs"
-          width={imgWidth}
-          height={imgWidth*0.6}
-          showBullets={true}
-          showNavs={true}
-          navStyle={2}
-          navSize={40}
-          navMargin={10}
-          autoPlay={true}
-          autoPlayDelay={5}
-          loop={true}
-          images={images}
+      <div className="gallery">
+        <img
+          src={getImage(project.folder, project.imgs[imageIndex])}
+          alt={`${PROJECT_TITLES[project.folder]} application preview ${imageIndex + 1}`}
         />
-        <div className="projectinfo-buttons">
-          <button className="projectinfo-button">Demo</button>
-          <a href={github} target="_blank" className="projectinfo-button">Github</a>
+        <div className="gallery-controls">
+          <button onClick={showPreviousImage} aria-label="Previous image">
+            ←
+          </button>
+          <span aria-live="polite">
+            {imageIndex + 1} / {project.imgs.length}
+          </span>
+          <button onClick={showNextImage} aria-label="Next image">
+            →
+          </button>
         </div>
       </div>
-
-    </motion.div>
-  )
+      <p className="detail-description">{project.description}</p>
+      <div className="detail-footer">
+        <div className="tags">
+          {project.stack.map((technology) => (
+            <span key={technology}>
+              {TECHNOLOGY_NAMES[technology] || technology}
+            </span>
+          ))}
+        </div>
+        {project.github && (
+          <a
+            className="button solid"
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View source <Icon name="github" />
+          </a>
+        )}
+        {project.link && (
+          <a
+            className="button solid"
+            href={project.link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open demo
+          </a>
+        )}
+      </div>
+    </article>
+  );
 }
-
-export default Projectinfo;

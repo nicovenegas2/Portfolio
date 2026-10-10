@@ -1,39 +1,21 @@
-import React from "react";
-import "../../Styles/Components/Navbar.css";
-import {AnimatePresence, motion} from "framer-motion";
-import LinkNav from "./LinkNav";
-import {Link} from "react-router-dom";
-import Modal from "./Modal";
-import Contact from "../Pages/Contact";
-function Navbar() {
+import { Link, NavLink } from 'react-router-dom';
 
-    const [contact, setContact] = React.useState(false);
-
-    function toggleContact(){
-        setContact(!contact);
-    }
-
-    return(
-        <motion.div className="nav-container"
-        initial = {{opacity: 0}}
-        animate={{ opacity: 1}}
-        transition={{ duration: 0.4}}
-        > 
-            <LinkNav link="/Portfolio" text="About Me"></LinkNav>
-            <LinkNav link="/projects" text="Projects"></LinkNav>
-            <LinkNav link="/skills" text="Skills"></LinkNav>
-            <motion.button
-            whileHover={{scale: 1.1}}
-            whileTap={{scale: 0.9}}
-            transition={{duration: 0.2}}
-            onClick={toggleContact}
-            className="nav-button nav-link">// Contact;</motion.button>
-            <AnimatePresence>
-                {/* {contact && <Contact closeFunction={toggleContact} />} */}
-                {contact && <Modal onClose={toggleContact} children={<Contact closeFunction={toggleContact}/>} />}
-            </AnimatePresence>
-        </motion.div>
-    );
+export default function Navbar({ onContact }) {
+  return (
+    <header className="card-header">
+      <Link className="brand" to="/" aria-label="Nicolas Venegas home">
+        nv<span>.</span>
+      </Link>
+      <nav aria-label="Main navigation">
+        <NavLink to="/" end>
+          About me
+        </NavLink>
+        <NavLink to="/projects">Projects</NavLink>
+        <NavLink to="/skills">Skills</NavLink>
+        <button onClick={onContact}>
+          Let’s talk <span aria-hidden="true">↗</span>
+        </button>
+      </nav>
+    </header>
+  );
 }
-
-export default Navbar;
