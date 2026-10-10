@@ -1,42 +1,40 @@
-import React from "react";
-import {motion} from 'framer-motion';
-import "../../Styles/Components/Icon.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faGithub,
+  faLinkedin,
+  faJava,
+  faReact,
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faGit,
+  faSquareGit,
+  faTrello,
+  faPython,
+  faSquareGithub,
+  faDocker,
+  faJenkins,
+  faNode,
+} from '@fortawesome/free-brands-svg-icons';
 
-function Icon({icon, link}){
-    const timeTransitions = 0.2 ;
-    function openLink(){
-      window.open(link, "_blank");
-    }
+const icons = {
+  github: faGithub,
+  linkedin: faLinkedin,
+  java: faJava,
+  react: faReact,
+  html5: faHtml5,
+  'css3-alt': faCss3Alt,
+  js: faJs,
+  git: faGit,
+  'square-git': faSquareGit,
+  trello: faTrello,
+  python: faPython,
+  'square-github': faSquareGithub,
+  docker: faDocker,
+  jenkins: faJenkins,
+  node: faNode,
+};
 
-    return(
-        <motion.div className="icon-div"
-        whileTap={{scale:0.8}}
-        whileHover={
-            {
-            scale:[null,1.4,1.3],
-            // rotate:[null,360],
-            // scale:[null,1.4],
-        }}
-        initial={{
-            opacity:0,
-        }}
-        animate={{
-            opacity:1,
-        
-        }}
-        
-        transition={{duration:timeTransitions}}
-        >
-            <motion.button className="icon-button"
-            // whileHover={{color:"var(--color-main)"}}
-            transition={{duration:timeTransitions}}
-            onClick={() => openLink(link)}
-            
-            >
-                <i className={`${icon}`}></i>
-            </motion.button>
-        </motion.div>
-    );
+export default function Icon({ name }) {
+  return <FontAwesomeIcon icon={icons[name]} />;
 }
-
-export default Icon

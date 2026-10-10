@@ -1,80 +1,95 @@
-import React,{useRef} from "react";
-import "../../Styles/Pages/Contact.css";
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import SocialMedia from '../Component/SocialMedia';
 
-import { motion } from "framer-motion"
+const buttonLabels = {
+  idle: 'Send message',
+  sending: 'Sending…',
+  success: 'Message sent',
+  error: 'Send message',
+};
 
+const statusMessages = {
+  success: 'Thanks for reaching out. I’ll get back to you soon.',
+  error:
+    'Your message could not be sent. Please try again or contact me on LinkedIn.',
+};
 
-function Contact( {closeFunction}) {
-
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    console.log(import.meta.env.VITE_PUBLIC_KEY_JS)
-    emailjs
-      .sendForm(import.meta.env.VITE_SERVICE_ID_JS, import.meta.env.VITE_TEMPLATE_ID_JS, form.current, {
-        publicKey: import.meta.env.VITE_PUBLIC_KEY_JS,
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
+export default function Contact() {
+  const formRef = useRef(null);
+  const [status, setStatus] = useState('idle');
+  const emailConfigured = Boolean(
+    import.meta.env.VITE_SERVICE_ID_JS &&
+    import.meta.env.VITE_TEMPLATE_ID_JS &&
+    import.meta.env.VITE_PUBLIC_KEY_JS,
+  );
+  async function sendMessage(event) {
+    event.preventDefault();
+    if (!emailConfigured || status === 'sending') return;
+    setStatus('sending');
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_SERVICE_ID_JS,
+        import.meta.env.VITE_TEMPLATE_ID_JS,
+        formRef.current,
+        { publicKey: import.meta.env.VITE_PUBLIC_KEY_JS },
       );
-
-    closeFunction();
-
-  };
-
-
-  return(
-      <motion.div className="contact-container"
-        initial={{
-            scale: 0.5,
-            opacity: 0,
-            y: 200,
-        }}
-        animate={{
-            scale: 1,
-            opacity: 1,
-            y: 0,
-        }}
-        exit={{
-            opacity: 0,
-            scale: 0.5,
-            transition: { duration: 0.15 }
-      }}
-        transition={{ duration: 1,type: "spring", stiffness: 300, damping: 17}}
-        >
-        <section className="card-form">
-          <div className="section-1">
-
-            <h1>Lets Talk!</h1>
-            <form className="contact-form" ref={form} onSubmit={sendEmail}>
-                <div className="contact-section">
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" required></input>
-                    <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="from_email" required></input>
-                </div>
-                <div className="contact-section message" >
-                    <label htmlFor="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <button type="submit" className="contact-button">Send</button>
-            </form>
+      setStatus('success');
+      formRef.current.reset();
+    } catch {
+      setStatus('error');
+    }
+  }
+  return (
+    <div className="contact-content">
+      <span className="contact-mark" aria-hidden="true">
+        Hello.
+      </span>
+      <h2>Let’s build something.</h2>
+      <p>Have a project in mind, or a team I could be part of? Let’s talk.</p>
+      {emailConfigured ? (
+        <form ref={formRef} onSubmit={sendMessage}>
+          <div className="form-row">
+            <label>
+              Your name
+              <input name="name" autoComplete="name" required />
+            </label>
+            <label>
+              Email address
+              <input
+                type="email"
+                name="from_email"
+                autoComplete="email"
+                required
+              />
+            </label>
           </div>
-          <div className="section-2"></div>
-
-
-        </section>
-        </motion.div>
-    )
+          <label>
+            What are you working on?
+            <textarea name="message" rows="4" required />
+          </label>
+          <button
+            className="button solid"
+            disabled={status === 'sending' || status === 'success'}
+          >
+            {buttonLabels[status]}
+          </button>
+          <p role="status">{statusMessages[status] || ''}</p>
+        </form>
+      ) : (
+        <div className="contact-alternative">
+          <p>You can reach me directly on LinkedIn.</p>
+          <a
+            className="button solid"
+            href="https://www.linkedin.com/in/covedev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Message on LinkedIn
+          </a>
+        </div>
+      )}
+      <SocialMedia />
+    </div>
+  );
 }
-
-export default Contact;
-

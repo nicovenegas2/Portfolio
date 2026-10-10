@@ -1,61 +1,22 @@
-html {
+:root {
   --color-main: #C2F8CB;
   --color-background-secondary: #5603AD;
   --color-text-secondary: #8367C7;
   --color-text: #B3E9C7;
   --color-background: #F0FFF1;
-  background-color: white;
-  border: none;
-  padding: 0;
-  overflow: hidden;
-  font-family: var(--font-family);
-  font-size: 16px;
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  
-  /* overflow: hidden; */
-
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  font-family: 'Courier Prime', monospace;
+  color: var(--color-background-secondary);
+  background: var(--color-main);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
-
-body{
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-
-
-
-@media  (max-width: 1750px){
-  html {
-    font-size: 11px;
-  }
-  
-  #root{
-    height: 100%;
-    width: 100%;
-  }
-}
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #750a0a;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+a { color: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--color-text-secondary); outline-offset: 5px; }
+::selection { background: var(--color-text-secondary); color: var(--color-background); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
