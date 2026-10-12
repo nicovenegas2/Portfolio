@@ -19,7 +19,7 @@ export default function Home() {
         <h1>
           Nicolas
           <br />
-          Venegas<span className="name-period">.</span>
+          Venegas.
         </h1>
         <p className="role">Fullstack developer</p>
         <p className="intro-copy">
